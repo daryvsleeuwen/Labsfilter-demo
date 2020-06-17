@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta http-equiv="Cache-control" content="public">
+  <meta http-equiv="Cache-control" content="private">
+  <meta http-equiv="Cache-control" content="no-cache" />
+  <meta http-equiv="Cache-control" content="no-store" />
+  <title>3D filter</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    canvas {
+       position: absolute;
+    }
+
+    video {
+      width: 700px;
+      height: 525px;
+    } 
+
+    button{
+      width: 160px;
+      height: 50px;
+      background: rgb(97, 62, 255);
+      cursor: pointer;
+      display: inline-block;
+      color: white;
+      margin: 0 40px;
+      font-size: 17px;
+      font-family: Arial, Helvetica, sans-serif;
+      border: none;
+      outline: none;
+    }
+
+    .buttonholder{
+      display: flex;
+      margin: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="buttonholder">
+    <button id="tiger" class="modelchanger">Tiger model</button>
+    <button id="crate" class="modelchanger">Crate model</button>
+  </div>
+  <video id="webcam" autoplay muted></video>
+
+  <canvas id='filtercanvas'></canvas>
+
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
